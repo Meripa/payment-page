@@ -6,6 +6,28 @@
     background: #333;
 }
 
+.container{
+    display: grid;
+    width: 100%;
+}
+
+.picture img{
+    position: relative;
+    width: 50px;
+    top: 50px;
+    left: 100px;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.picture img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
@@ -16,13 +38,12 @@
 /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #ececec;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 25px;
-    margin-left: 70px;
-    padding-top: 25px;
+    margin-left: 70px; 
   }
   
   /* Change the color of links on hover */
@@ -31,21 +52,16 @@
     color: black;
   }
 
-  .util-buttons{
-    position: absolute;
-    display: flex;
-    gap: 25px;
-    right: 100px;
-    top: 15px;
-  }
-
+  
   .util-button{
     padding: 8px 13px;
     font-size: 20px;
     font-weight: 600;
     font-family: inherit;
     border-radius: 6px;
-    background: white;
+    background: rgb(65, 64, 64);
+    margin-left: 100px;
+    color: #ca1919;
 }
 
 .util-button:hover{
@@ -56,8 +72,8 @@
 .left-section{
     color: white;
     position: absolute;
-    left: 100px;
-    top: 350px;
+    left: 200px;
+    top: 400px;
 }
 
 .left-section h4{
@@ -69,6 +85,7 @@
  margin-top: 50px;
  font-size: 60px;
  letter-spacing: 1.5px;
+ max-width: 600px;
 }
 
 .left-section p{
@@ -79,4 +96,173 @@
     max-width: fit-content;
     color: #333;
     border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.left-section p:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.left-section p img{
+    max-width: 40px;
+    background-color: white;
+}
+
+.right-section img{
+    position: relative;
+    max-width: 500px;
+    top: 100px;
+    left: 1200px; 
+}
+
+#wrapper {
+    width: 645px;
+    height: 500px;
+    margin: 35px auto 0 auto;
+}
+
+.mobile{
+    float: left;
+    position: relative;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+#tm {
+    display: none;
+
+}
+
+.mobile section {
+    background: wheat;
+    width: 285px;
+    height: 500px;
+    position: relative;
+    transition: all 0.25s;
+}
+
+.mobile section label {
+    color: black;
+    font: bold 14px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 4px;
+    display: block;
+    padding: 10px 0;
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 100px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.sidenav {
+    background: rgb(50, 60, 60);
+    width: 150px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 100px;
+}
+
+.sidenav li {
+    list-style-type: none;
+}
+
+.sidenav a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidenav b {
+    font: bold 12px/48px;
+    display: block;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.4s;
+}
+
+.sidenav i {
+    display: block;
+    width: 50px;
+    float: left;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+}
+
+@media screen and (max-width: 703px)
+{
+    *{
+        margin: 0;
+        
+        width: 640px;
+        font-family: 'Poppins', 'sans-serif';
+        
+        background: #333;
+    }
+    
+    .picture img{
+        position: relative;
+        width: 30px;
+        top: 40px;
+        left: 50px;
+        background-color: #ddd;
+        padding: 5px;
+        border-radius: 50%;
+        max-width: 100%;
+    }
+
+    .left-section{
+        color: white;
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        max-width: 500px;
+    }
+
+    .left-section h4{
+        font-size: 20px;
+        letter-spacing: 3px;
+        text-align: left;
+    }
+
+    .left-section h1{
+        margin-top: 50px;
+        font-size: 40px;
+        letter-spacing: 1.5px;
+        max-width: 300px;
+       }
+
+       .left-section p{
+        font-size: 30px;
+        margin-top: 50px;
+        border: #333 solid;
+        background-color: white;
+        max-width: fit-content;
+        color: #333;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .right-section img{
+        position: relative;
+        max-width: 400px;
+        top: 60px;
+        left: 120px; 
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    .container{
+        max-width: 1000px;
+    }
 }
